@@ -1,7 +1,5 @@
 # kostQ
 
-## Project Akhir PBO
-
 ### Anggota Kelompok:
 1. Nur Muhammad Himawan (202410101070)
 2. Varrel Dwitantio Purwadiansyah (202410101081)
