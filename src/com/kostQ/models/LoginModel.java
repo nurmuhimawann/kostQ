@@ -1,5 +1,7 @@
 package com.kostQ.models;
 
+import com.kostQ.views.DashboardView;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -38,14 +40,14 @@ public class LoginModel extends BaseModel {
                     setId_account(result.getInt("id_" + tableName));
                     System.out.println("Login Berhasil");
                     if (Objects.equals(role, "pemilik")) {
-                        // redirect to menu pemilik
+                        DashboardView.menuPemilik();
                     } else if (Objects.equals(role, "penyewa")) {
-                        // redirect to menu penyewa
+                        DashboardView.menuPenyewa();
                     }
                 }
             } else {
                 System.out.println("Username atau password salah !");
-                // redirect to menu awal
+                DashboardView.backToLogin();
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
